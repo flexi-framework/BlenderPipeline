@@ -52,3 +52,7 @@ Dynamic visualization of vortex shedding behind a circular cylinder.
 ### Particles in a T106C turbine flow
 
 ![T106C_particles](/examples/showcases/T106C_particles.png)
+
+### Vortex visualization of flow around a golf ball at Re=150.000
+
+![golfball](examples/showcases/golfballRe150000.png)
