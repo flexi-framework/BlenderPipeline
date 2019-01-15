@@ -15,13 +15,23 @@
 #=================================================================================================================================
 
 
-################################################################
+##################################################################################################################################
 #
-# Modified animate_paraview script for the output of .ply files.
-# You need to specify the name of the source that should be exported
-# and the variable that is used to colour the surface.
+#                                                        ANIMATE PARAVIEW SCRIPT
 #
-################################################################
+# Python script which can be used to automatically apply a ParaView state to a list of input files (CFD solutions) and perform
+# output of the results in either .x3d or .ply file format.
+#
+# Based on the animate_paraview.py script of the FLEXI software package, https://www.flexi-project.org.
+#
+# You will always need to specify the path to the ParaView layout file (.pvsm), which needs to be created beforehand using
+# a single sample of the CFD solution files.
+# Default output is done in .ply file format. In that case you need to specify the source of the output, since only a single
+# pipeline object can be exported using the .ply export. Additionally, the name of the variable used to color the pipeline
+# object needs to be supplied. You can also switch to .x3d output, which will export the whole scene.
+# The resulting output will be saved in a subfolder and the name of the files is given by the time stamp and the  appendix.
+#
+##################################################################################################################################
 
 
 import argparse
@@ -30,15 +40,15 @@ import subprocess
 import sys
 
 parser = argparse.ArgumentParser(description='Animate Paraview data')
-parser.add_argument('-l','--layout',  help='Paraview State file (.pvsm-file)')
-parser.add_argument('-r','--reader',  help='Path to custom reader plugin')
-parser.add_argument('-m','--mpi', type=int, default=1, help='Number of MPI procs for rendering')
-parser.add_argument('-o','--output', default='',  help='Appendix for filenames')
-parser.add_argument('-x','--outputmode', default='ply',  help='export ply or x3d, options: ply, x3d')
-parser.add_argument('-s','--source', default='',  help='name of the pipeline object that should be saved')
-parser.add_argument('-v','--variable', default='',  help='name of the variable that is used to colour the pipeline object')
-parser.add_argument('-f','--folder', default='',  help='output folder')
-parser.add_argument('plotfiles', nargs='+', help='Files to animate (.vtu/.pvtu/.h5-files)')
+parser.add_argument('-l','--layout',                       help='ParaView State file (.pvsm-file)')
+parser.add_argument('-r','--reader',                       help='Path to custom reader plugin (optional)')
+parser.add_argument('-m','--mpi', type=int, default=1,     help='Number of MPI procs for rendering (defaults to single execution)')
+parser.add_argument('-o','--output',        default='',    help='Appendix for filenames')
+parser.add_argument('-x','--outputmode',    default='ply', help='export ply or x3d, options: ply, x3d')
+parser.add_argument('-s','--source',        default='',    help='name of the pipeline object that should be saved (ply output)')
+parser.add_argument('-v','--variable',      default='',    help='name of the variable that is used to colour the pipeline object (ply output)')
+parser.add_argument('-f','--folder',        default='',    help='output folder')
+parser.add_argument('plotfiles',nargs='+',                 help='Files to animate (.vtu/.pvtu/.h5-files)')
 
 
 args = parser.parse_args()
