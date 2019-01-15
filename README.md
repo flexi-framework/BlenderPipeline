@@ -15,7 +15,7 @@ You first generate a ParaView state (`.pvsm` file) that does the post processing
 to apply this state to all your files in the time series and export the resulting data. Use `animate_paraview.py --help`
 to see the syntax of the tool.
 
-## animate_blender.py
+### animate_blender.py
 
 Again, first generate a Blender layout (`.blend` file) using a single snapshot of the time series that looks like you want it to look. Then delete
 all the imported geometry from that layout and save it - the script will later handle the re-import. Now, call Blender in background mode and supply the `animate_blender.py` script to it, which will
