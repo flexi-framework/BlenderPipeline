@@ -34,3 +34,15 @@ Static visualization of streamlines around the Blender mascot, a monkey head cal
 Dynamic visualization of vortex shedding behind a circular cylinder.
 
 ![Rendered vortex shedding behind circular cylinder](tutorial/renderCylinder.png)
+
+
+
+### Vortical structures downwind of a cylinder at Re=3900
+
+![cylinder_re3900](/home/adb/Desktop/blendertuto/github/examples/showcases/cylinder_re3900.png)
+
+
+
+### Flow over a sphere at Re=1000
+
+![sphere-re1000](/home/adb/Desktop/blendertuto/github/examples/showcases/sphere-re1000.png)
