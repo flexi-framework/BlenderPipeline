@@ -39,10 +39,10 @@ Dynamic visualization of vortex shedding behind a circular cylinder.
 
 ### Vortical structures downwind of a cylinder at Re=3900
 
-![cylinder_re3900](/home/adb/Desktop/blendertuto/github/examples/showcases/cylinder_re3900.png)
+![cylinder_re3900](/examples/showcases/cylinder_re3900.png)
 
 
 
 ### Flow over a sphere at Re=1000
 
-![sphere-re1000](/home/adb/Desktop/blendertuto/github/examples/showcases/sphere-re1000.png)
+![sphere-re1000](/examples/showcases/sphere-re1000.png)
