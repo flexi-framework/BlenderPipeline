@@ -56,3 +56,6 @@ Dynamic visualization of vortex shedding behind a circular cylinder.
 ### Vortex visualization of flow around a golf ball at Re=150.000
 
 ![golfball](examples/showcases/golfballRe150000.png)
+
+### A Christmas Special
+[![](http://img.youtube.com/vi/dMEGOc6rdFQ/0.jpg)](http://www.youtube.com/watch?v=dMEGOc6rdFQ "Santa Flexi")
